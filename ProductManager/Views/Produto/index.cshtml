@@ -33,21 +33,33 @@
             <td>
                 @Html.DisplayFor(modelItem => item.Id)
             </td>
-            <td>
+            <td class="alert alert-info">
                 @Html.DisplayFor(modelItem => item.Nome)
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.Categoria)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.Preco)
-            </td>
-            <td>
-                @Html.ActionLink("Edit", "Edit", new {  id=item.Id }) |
-                @Html.ActionLink("Details", "Details", new { id=item.Id  }) |
-                @Html.ActionLink("Delete", "Delete", new {  id=item.Id  })
-            </td>
-        </tr>
+                @if (item.Preco < 10)
+                  {
+                    <td class="alert alert-danger">
+                        @Html.DisplayFor(modelItem => item.Preco)
+                    </td>
+                  }
+                   else
+                   {
+
+                    <td class="alert alert-info">
+                        @Html.DisplayFor(modelItem => item.Preco)
+                    </td>
+                    }
+                </td>
+                <td>
+                    @Html.ActionLink("Edit", "Edit", new { id = item.Id }) |
+                    @Html.ActionLink("Details", "Details", new { id = item.Id }) |
+                    @Html.ActionLink("Delete", "Delete", new { id = item.Id })
+                </td>
+            </tr>
 }
     </tbody>
 </table>

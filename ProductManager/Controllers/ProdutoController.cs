@@ -1,4 +1,5 @@
 ﻿//Otoniel ra 533084
+// Fábio ra 558249
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -31,7 +32,7 @@ namespace ProductManager.Controllers
         public ActionResult Details(int? id)
         {
             var produto = listaDeProdutos.FirstOrDefault(x => x.Id == id);
-            return View();
+            return View(produto);
         }
 
         // GET: Produto/Create
