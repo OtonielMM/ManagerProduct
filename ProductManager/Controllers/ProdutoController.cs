@@ -17,7 +17,9 @@ namespace ProductManager.Controllers
         {
             new Produto{Id = 1, Nome = "Tomato Soup", Categoria="Groceries",Preco = 1},
             new Produto{Id = 2, Nome = "YO-Yo", Categoria = "Toys", Preco = 3.78M},
-            new Produto{Id = 3, Nome = "Hammer", Categoria = "Hardware", Preco = 16.99M}
+            new Produto{Id = 3, Nome = "Hammer", Categoria = "Hardware", Preco = 16.99M},
+            new Produto{Id = 4, Nome = "Orange", Categoria="Fruit",Preco = 2},
+            new Produto{Id = 1, Nome = "Notebook", Categoria="Hardware",Preco = 2999.50M}
         };
 
 
